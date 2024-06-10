@@ -1,0 +1,138 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    background-color: #7b7878;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    color: black;
+    border-color: black;
+    font-size: 12px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width: 100%;
+}
+
+/* Portrait layout (default) */
+.screen {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pedidos {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+    align-items: center;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+
+.order-item {
+    width: 80%;
+    border: solid;
+    padding: 10px;
+    background-color: #982c5d;
+}
+
+.order-picture {
+    height: 24vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lista-botoes {
+    padding-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.botao-grande {
+    width: 100%;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .botao-grande {
+        width: 60%;
+        height: 3rem;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.preview-pedido {
+    flex: 4;
+    border: solid;
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+}
+
+.placeholder {
+    background-image: url(../img/pizza.jpg);
+}
+
+
+.form-pizza {
+    flex: 4;
+}
+
+.input-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.form-linha-esq {
+    flex: 1;
+}
+
+.form-linha-dir {
+    flex: 5;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image: linear-gradient(to bottom, #CDF7F6 0%, #8FB8DE 51%);
+    }
+}
